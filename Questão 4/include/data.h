@@ -1,6 +1,7 @@
 #ifndef DATA_H
 #define DATA_H
-
+#include <ostream>
+using namespace std;
 class Data{
 private:
 	int m_dia;
@@ -20,6 +21,7 @@ public:
 	void somarMeses(int meses_);  
 	void somarAnos(int anos_);
 	void proximoDia();
+	friend ostream& operator<< (ostream &o, Data * d);
 	
 };
 #endif

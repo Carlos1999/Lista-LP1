@@ -11,7 +11,15 @@ public:
 	Data(int dia_, int mes_, int ano_);
 	Data();
 	~Data();
-		
+	
+	int getDia();
+	int getMes();
+	int getAno();	
 
+	void somarDias(int dias_);
+	void somarMeses(int meses_);  
+	void somarAnos(int anos_);
+	void proximoDia();
+	
 };
 #endif

@@ -10,7 +10,7 @@ BIN = ./bin
 OBJ = ./build
 
 PROG = $(BIN)/teste
-OBJS = $(OBJ)/sorteadora.o $(OBJ)/cartela.o $(OBJ)/main.o 
+OBJS = $(OBJ)/sorteadora.o $(OBJ)/cartela.o $(OBJ)/jogador.o $(OBJ)/bingo.o $(OBJ)/main.o 
 
 all:mkdirs $(PROG)
 
@@ -23,7 +23,13 @@ $(OBJ)/sorteadora.o: $(INC)/sorteadora.h $(SRC)/sorteadora.cpp
 $(OBJ)/cartela.o: $(INC)/cartela.h $(SRC)/cartela.cpp $(INC)/sorteadora.h $(SRC)/sorteadora.cpp 
 	$(CC) $(CPPFLAGS) -c $(SRC)/cartela.cpp -o $(OBJ)/cartela.o
 
-$(OBJ)/main.o: $(INC)/sorteadora.h $(INC)/cartela.h $(SRC)/main.cpp
+$(OBJ)/jogador.o: $(INC)/jogador.h $(SRC)/jogador.cpp $(INC)/cartela.h $(SRC)/cartela.cpp $(INC)/sorteadora.h $(SRC)/sorteadora.cpp 
+	$(CC) $(CPPFLAGS) -c $(SRC)/jogador.cpp -o $(OBJ)/jogador.o
+
+$(OBJ)/bingo.o: $(INC)/bingo.h $(SRC)/bingo.cpp $(INC)/jogador.h $(SRC)/jogador.cpp $(INC)/cartela.h $(SRC)/cartela.cpp $(INC)/sorteadora.h $(SRC)/sorteadora.cpp 
+	$(CC) $(CPPFLAGS) -c $(SRC)/bingo.cpp -o $(OBJ)/bingo.o
+
+$(OBJ)/main.o:$(INC)/jogador.h $(INC)/bingo.h $(INC)/sorteadora.h $(INC)/cartela.h $(SRC)/main.cpp
 	$(CC) $(CPPFLAGS) -c $(SRC)/main.cpp -o $(OBJ)/main.o
 
 mkdirs: 

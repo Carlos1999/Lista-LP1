@@ -6,12 +6,14 @@ using namespace std;
 class Cartela{
 private:
 	int m_vetor_sorteados[15];	
-
+	int m_numeroCartela;
 public:
 
-	Cartela();
+	Cartela(int numeroCartela_);
 	~Cartela();
 	friend ostream& operator<< (ostream &o, Cartela * c);
 	int getNumero(int numero_);
+	int getNumeroCartela();
+	int presente(int numero_);
 };
 #endif

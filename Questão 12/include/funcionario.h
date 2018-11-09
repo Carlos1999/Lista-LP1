@@ -2,6 +2,8 @@
 #define FUNCIONARIO_H
 #include "pessoa.h"
 #include <string>
+#include <ostream>
+using namespace std;
 class Funcionario: public Pessoa{
 private:
 	std::string m_matricula;
@@ -14,5 +16,7 @@ public:
 	void setMatricula(std::string matricula_);
 	float getSalario();
 	void setSalario(float salario_);
+	void print();
+	friend ostream& operator<<(ostream &o, Funcionario * f);
 };
 #endif

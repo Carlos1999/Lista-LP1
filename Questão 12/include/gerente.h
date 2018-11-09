@@ -14,5 +14,6 @@ public:
 	void setMatricula(std::string matricula_);
 	float getSalario();
 	void setSalario(float salario_);
+	void print();
 };
 #endif

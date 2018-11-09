@@ -13,5 +13,6 @@ int main (int argc , char const * argv []){
 	Supervisor *s = new Supervisor("João",50,1.70, "231923910", 10000000.0);
 	AssistenteTecnico * assTec = new AssistenteTecnico("Carlos",19,1.80, "201738129312", 1000000.0,500.0,s);
 
+	cout <<s;
 return 0;
 }

@@ -23,3 +23,10 @@ float Gerente::getSalario(){
 void Gerente::setSalario(float salario_){
 	m_salario = salario_;
 }
+
+void Gerente::print() {
+
+	cout<< "Nome:" << getNome() << "|" << "Idade"<<getIdade() << "|" <<"Altura: " <<getAltura()<<endl;
+	cout<< "Matricula"<<  getMatricula() <<"|" <<"Salario: " << getSalario() <<endl;
+
+}

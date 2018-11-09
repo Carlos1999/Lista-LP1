@@ -23,3 +23,12 @@ float Funcionario::getSalario(){
 void Funcionario::setSalario(float salario_){
 	m_salario = salario_;
 }
+
+void Funcionario::print(){
+
+}
+
+ostream& operator<< (ostream &o, Funcionario *f) {
+	 f->print();
+return o;
+}

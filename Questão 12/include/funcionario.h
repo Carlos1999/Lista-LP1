@@ -5,7 +5,7 @@
 #include <ostream>
 using namespace std;
 class Funcionario: public Pessoa{
-private:
+protected:
 	std::string m_matricula;
 	float m_salario;
 
@@ -16,7 +16,7 @@ public:
 	void setMatricula(std::string matricula_);
 	float getSalario();
 	void setSalario(float salario_);
-	void print();
+	virtual void print()=0;
 	friend ostream& operator<<(ostream &o, Funcionario * f);
 };
 #endif

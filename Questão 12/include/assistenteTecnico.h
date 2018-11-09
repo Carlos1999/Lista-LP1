@@ -6,9 +6,9 @@
 class AssistenteTecnico: public Funcionario{
 private:
 	float m_bonus_salarial;
-	Supervisor *m_supervisor;
+	Funcionario *m_supervisor;
 public:
-	AssistenteTecnico(std::string nome_,int idade_,float altura_, std::string matricula_, float salario_,float bonus_salarial_, Supervisor *supervisor_);
+	AssistenteTecnico(std::string nome_,int idade_,float altura_, std::string matricula_, float salario_,float bonus_salarial_, Funcionario *supervisor_);
 	~AssistenteTecnico();
 	float getBonusSalarial();
 	void setBonusSalarial(float bonus_salarial_);

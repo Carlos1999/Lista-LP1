@@ -4,7 +4,7 @@
 #include <ostream>
 using namespace std;
 class Pessoa{
-private:
+protected:
 	string m_nome;
 	int m_idade;
 	float m_altura;
